@@ -4,7 +4,7 @@
     <h5 class="card-title">{!! $movieTitle !!}</h5>
     <p class="card-text">{{ $movie }}: {{ $movieDirector }}</p>
     <p class="card-text">Trama: {{Str::limit($movieDescription, 30) }}</p>
-    <p class="card-text">Genere: {{ $movieGenre }}</p>
+    <p class="card-text">Genere: <a class="link-genre text-decoration-none text-dark fw-bold" href="{{route('film.genre', ['genre' => $movieGenre])}}">{{ $movieGenre }}</a></p>
   </div>
   <div class="card-footer">
     <p class="card-text">Anno: {{ $movieRelease }}</p>

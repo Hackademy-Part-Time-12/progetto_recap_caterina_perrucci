@@ -1,10 +1,7 @@
 <x-layout>
-    <x-slot name="title">
-        Film
-    </x-slot>
     <div class="container my-5">
         <div class="row">
-            <h3 class="text-center">Lista dei film</h3>
+            <h3 class="text-center">Genere</h3>
         </div>
     </div>
    

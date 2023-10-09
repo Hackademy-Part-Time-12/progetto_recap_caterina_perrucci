@@ -75,4 +75,14 @@ class MovieController extends Controller
         }
         abort(404);
     }
+
+    public function filterByGenre($genre){
+        $movieByGenre = [];
+        foreach($this->movies as $movie){
+            if($genre == $movie['genre']){
+                $movieByGenre[] = $movie;
+            }
+        }
+        return view('film.genreFilm', ['movies' => $movieByGenre]);
+    }
 }

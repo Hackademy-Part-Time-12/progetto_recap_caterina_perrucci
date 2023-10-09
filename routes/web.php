@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 // Rotte Public
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/contact', [PublicController::class, 'contact'])->name('contact');
+Route::post('/contact/submit', [PublicController::class, 'contactSubmit'])->name('contact.submit');
 
 // Rotte Movie
 Route::get('/film', [MovieController::class, 'index'])->name('film.index');
 Route::get('/film/{id}', [MovieController::class, 'show'])->name('film.show');
+Route::get('/film/genre/{genre}', [MovieController::class, 'filterByGenre'])->name('film.genre');
