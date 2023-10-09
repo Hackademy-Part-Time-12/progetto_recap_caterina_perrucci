@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Rotte Public
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+
+// Rotte Movie
+Route::get('/film', [MovieController::class, 'index'])->name('film.index');
