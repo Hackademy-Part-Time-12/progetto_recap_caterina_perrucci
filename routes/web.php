@@ -19,3 +19,4 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 // Rotte Movie
 Route::get('/film', [MovieController::class, 'index'])->name('film.index');
+Route::get('/film/{id}', [MovieController::class, 'show'])->name('film.show');

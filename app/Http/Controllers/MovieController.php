@@ -66,4 +66,13 @@ class MovieController extends Controller
     public function index(){
         return view('film.index', ['movies' => $this->movies]);
     }
+
+    public function show($id){
+        foreach($this->movies as $movie){
+            if($id == $movie['id']){
+                return view('film.show', ['movie' => $movie]);
+            }
+        }
+        abort(404);
+    }
 }

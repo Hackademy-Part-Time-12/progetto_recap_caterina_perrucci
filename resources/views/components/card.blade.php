@@ -8,6 +8,6 @@
   </div>
   <div class="card-footer">
     <p class="card-text">Anno: {{ $movieRelease }}</p>
-    <a href="#" class="btn btn-dark">Vai al dettaglio</a>
+    <a href="{{route('film.show', ['id' => $movieId])}}" class="btn btn-dark">Vai al dettaglio</a>
   </div>
 </div>
